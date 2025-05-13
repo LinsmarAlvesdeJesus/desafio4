@@ -1,68 +1,140 @@
 /*estilizando o body*/
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-/* Remove o sublinhado */
-a {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+/*estilizando o header*/
+a{
   text-decoration: none;
-}
-/* estilizando o header*/
-header {
+}  
+/* estlizando o header*/
+header {  
   background-color: white;
-  color: #036;
-  padding: 20px;
-  text-align: center; 
-}
-/* Estilizando a logo marca*/
-.logo {
-  float: left;
-  width: 100px; 
-  height: auto;
-}
-/* estilizando o main*/
-main {
-  padding: 40px;
-  text-align: center;
-  image-resolution: 540px,300px;
-}
-/* Estilizando imagem*/
-main img {
-  max-width: 100%;
-  height: auto; 
-  display: block; 
-}
-/*estilizando o main*/
-footer {
-  background-size: 540px 360px,;
-  background-color: #003366;
+    color: #003366;
+    padding: 20px;
+    text-align: center; 
+  }
+  /* estilizando a logomarca para a esquerda */
+  header a img {
+    float: left; /* Faz a imagem flutuar à esquerda */
+    margin-right: 10px; /* Adiciona um espaço à direita da imagem, se necessário */
+  }
+  /*estilizando o main*/
+  main {
+    padding: 40px;
+    text-align: center;
+  }
+  /*estilizando o footer*/
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #003366;
+    text-align: left;
+    max-height: 80px;
+    padding-bottom: 5px ;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+  /*dimensionando logomarca*/
+  #logoford{
+    max-height: 80px;
+  }
+  a img{
+    max-height: 540px;
+  }
+  .redes-socias{
   text-align: left;
-  padding: 10px;
 }
-/* Criando tabela */
-table {
-  width: 60%;
-  border-collapse: collapse;
-  margin: 20px auto;
-  }
-  th, td {
-  border: 1px solid #ccc;
-  padding: 12px;
-  text-align: center;
-  }
-  /* Criando do botão */
+/* criando tabela */
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    }
+    th, td {
+    border: none;
+    padding: 12px;
+    text-align: center;
+    }
+  /* criando do botão */
   button {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #003366;
+  background-color: #1351d8;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
   }
-  /* Estilizando o button */
+  /*estilizando*/
   button:hover {
-  background-color: #0055a5;
+  background-color: #1351d8;
   transform: scale(1.05);
   transition: 0.3s;
   }
+  /* Estilo do formulário */
+form input,
+form select,
+form textarea {
+width: 40%;
+margin: 5px 0 15px;
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+.container-imagem-formulario {
+  display: flex; /* Coloca os filhos (div da imagem e form) lado a lado */
+  align-items: flex-start; /* Alinha os itens no topo (para o formulário não ficar no meio verticalmente) */
+  gap: 60px; /* Adiciona um espaço entre a imagem e o formulário (ajuste conforme necessário) */
+  /* Você pode adicionar uma largura máxima para este container se desejar */
+  /* max-width: 960px; */
+  /* margin: 0 auto; */ /* Para centralizar o container na página, se necessário */
+}
+
+/* O div da imagem já tem estilos inline, mas você pode adicionar mais aqui se precisar */
+.container-imagem-formulario > div:first-child {
+  /* Estilos adicionais para o div que contém a imagem, se necessário */
+  /* flex-shrink: 0; /* Para evitar que a imagem encolha */ */
+}
+
+/* Estilos para o formulário */
+.container-imagem-formulario form {
+  flex: 1; /* Permite que o formulário ocupe o espaço restante */
+  /* Outros estilos para o seu formulário, se já existirem */
+  box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+}
+
+/* Se você tiver estilos específicos para os elementos dentro do formulário, eles permanecem os mesmos */
+/* Quando o campo estiver em foco */
+form input:focus,
+form textarea:focus,
+form select:focus {
+outline: 2px solid #003366;
+}
+textarea {
+  resize: none;
+}
+/* Estilo do botão */
+form button {
+background: #003366;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+Docente: Robson Guima
+transition: 0.3s;
+border-radius: 5px;
+}
+/* Efeito hover no botão */
+form button:hover {
+background: #0055a5;
+transform: scale(1.05);
+}
+
+  
