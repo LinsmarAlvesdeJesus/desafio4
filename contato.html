@@ -10,20 +10,46 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="img/logo-ford-256.png" alt="Logo Ford" class="logo"/></a>
+        <a href="index.html">
+            <img src="img/logo-ford-256.png" alt="Logo Ford" style="max-height: 40px; width: auto;">
+          </a>
         <nav>
             <a href="index.html">Home</a>
             <a href="lancamento.html">Lançamento</a>
             <a href="contato.html">Contato</a>
         </nav>
     </header>
+    <main>
+        <main>
+            <h2>Fale Conosco</h2>
+            <div class="container-imagem-formulario">
+                <div style="border: none;">
+                  <img src="img/XL Cabine.jpg" style="max-width: 100%; height: auto; float: center;">
+                  <div style="clear: both;"></div>
+                </div>
+                <form>
+                  <input type="text" placeholder="NOME*" required /><br>
+                  <input type="email" placeholder="exemplo@email.com*" required /><br>
+                  <input type="tel" placeholder="(00) 00000-0000" required /><br>
+                  <select required><br>
+                    <option value="" disabled selected>Selecione uma opção</option><br>
+                    <option>Elogio</option>
+                    <option>Dúvida</option>
+                    <option>Reclamação</option>
+                  </select><br>
+                  <textarea placeholder="Digite sua mensagem aqui..." required></textarea><br>
+                  <button type="submit">Enviar</button>
+                </form>
+              </div>
+            </main>
     <footer>
         <div class="Redes-sociais">
             <a href="#"><img src="img/facebook-50.png" alt="Facebook"/></a>
             <a href="#"><img src="img/instagram-logo-50.png" alt="Instagram"/></a>
             <a href="#"><img src="img/youtube-squared-50.png" alt="YouTube"/></a>
+            <img src="img/logo-ford-256.png" alt="Logo Ford" style="max-height: 40px; width: auto; float: right;">
         </div>
-        <p>&copy: 2025 Ford Brasil. Todos os direitos reservados.</p>
+        <p style="text-align: center; color: white; margin-top: -40px">&copy: 2025 Ford Brasil. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
