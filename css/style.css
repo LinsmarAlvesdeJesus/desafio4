@@ -27,27 +27,53 @@ header {
   }
   /*estilizando o footer*/
   footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #003366;
-    text-align: left;
-    max-height: 80px;
-    padding-bottom: 5px ;
-    padding-top: 10px;
-    box-sizing: border-box;
-  }
-  /*dimensionando logomarca*/
-  #logoford{
-    max-height: 80px;
-  }
-  a img{
-    max-height: 540px;
-  }
-  .redes-socias{
-  text-align: left;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
 }
+
+.footer-conteudo {
+  display: flex;
+  flex-direction: row; /* padrão: lado a lado */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.logo-footer {
+  max-height: 60px;
+  width: auto;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.redes-sociais img {
+  max-height: 40px;
+  width: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  flex: 1 1 100%; /* força quebra de linha se necessário */
+  text-align: center;
+  color: white;
+}
+
+/* Responsivo opcional */
+@media (max-width: 600px) {
+  .redes-sociais {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 /* criando tabela */
   table {
     width: 60%;
@@ -69,72 +95,91 @@ header {
   cursor: pointer;
   border-radius: 5px;
   }
-  /*estilizando*/
+  /*estilizando botão*/
   button:hover {
   background-color: #1351d8;
   transform: scale(1.05);
   transition: 0.3s;
   }
   /* Estilo do formulário */
-form input,
-form select,
-form textarea {
-width: 40%;
-margin: 5px 0 15px;
-padding: 10px;
-font-size: 14px;
-border: 1px solid #ccc;
-border-radius: 5px;
-box-sizing: border-box;
-}
-
-.container-imagem-formulario {
-  display: flex; /* Coloca os filhos (div da imagem e form) lado a lado */
-  align-items: flex-start; /* Alinha os itens no topo (para o formulário não ficar no meio verticalmente) */
-  gap: 60px; /* Adiciona um espaço entre a imagem e o formulário (ajuste conforme necessário) */
-  /* Você pode adicionar uma largura máxima para este container se desejar */
-  /* max-width: 960px; */
-  /* margin: 0 auto; */ /* Para centralizar o container na página, se necessário */
-}
-
-/* O div da imagem já tem estilos inline, mas você pode adicionar mais aqui se precisar */
-.container-imagem-formulario > div:first-child {
-  /* Estilos adicionais para o div que contém a imagem, se necessário */
-  /* flex-shrink: 0; /* Para evitar que a imagem encolha */ */
-}
-
-/* Estilos para o formulário */
-.container-imagem-formulario form {
-  flex: 1; /* Permite que o formulário ocupe o espaço restante */
-  /* Outros estilos para o seu formulário, se já existirem */
-  box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
-}
-
-/* Se você tiver estilos específicos para os elementos dentro do formulário, eles permanecem os mesmos */
-/* Quando o campo estiver em foco */
-form input:focus,
-form textarea:focus,
-form select:focus {
-outline: 2px solid #003366;
-}
-textarea {
-  resize: none;
-}
-/* Estilo do botão */
-form button {
-background: #003366;
-color: white;
-padding: 10px 20px;
-border: none;
-cursor: pointer;
-Docente: Robson Guima
-transition: 0.3s;
-border-radius: 5px;
-}
-/* Efeito hover no botão */
-form button:hover {
-background: #0055a5;
-transform: scale(1.05);
-}
-
+  .container-imagem-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap; /* para telas pequenas */
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  /* definição da imagem*/
+  .imagem img {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    box-shadow: none;
+  }
+  /* estilizando o form*/
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    width: 100%;
+  }
   
+  input, select, textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  textarea {
+    resize: none;
+    min-height: 100px;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+ @media (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header a img {
+    float: none;
+    margin: 0 auto 10px auto;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .redes-sociais {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
