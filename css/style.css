@@ -25,6 +25,10 @@ header {
     padding: 40px;
     text-align: center;
   }
+  main img {
+    max-width: 100%; /* Garante que a imagem não seja maior que o container */
+    height: auto;    /* Mantém a proporção da imagem */
+}
   /*estilizando o footer*/
   footer {
   background-color: #003366;
